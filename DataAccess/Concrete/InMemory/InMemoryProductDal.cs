@@ -3,6 +3,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace DataAccess.Concrete.InMemory
@@ -58,6 +59,31 @@ namespace DataAccess.Concrete.InMemory
             productToUpdate.CategoryId = product.CategoryId;
             productToUpdate.UnitPrice = product.UnitPrice;
             productToUpdate.UnitsInStock = product.UnitsInStock;
+        }
+
+        void IEntityRepository<Product>.Add(Product entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IEntityRepository<Product>.Delete(Product entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        Product IEntityRepository<Product>.Get(Expression<Func<Product, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<Product> IEntityRepository<Product>.GetAll(Expression<Func<Product, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IEntityRepository<Product>.Update(Product entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }
